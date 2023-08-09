@@ -2,8 +2,6 @@ Sign Language Predictor Model
 
 This model is used to predict American Sign Language (ASL) signs based on input from a USB camera. It is trained on an imagenet Resnet-18 model using transfer learning. The goal of this project is improving communication between mute and deaf individuals and the general population.
 
-![A computer analyzes a face.](https://imgur.com/HeyVfsW)
-
 ## The Algorithm
 The algorithim is used by recording a video on a Logitech webcam - supported by Jetson nano. It uses a 2GB Jetson Nano, and so it uses a preflashed SD card flashed from the NVIDIA webpage. It collects frames from the live video and sends the frames to be compared to pre-identified letters in the ASL alphabet using imagenet. From these comparisons, imagenet will then make a prediction for which letter is being signed. The model will then print that prediction along with a confidence percentage and based on that confidence level it is up to user interpretation to decide the validity of the prediction.
 Note: I ran this model on a relatively low epoch with information that was askew. The pretrained model is quite inaccurate.
